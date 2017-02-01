@@ -17,3 +17,4 @@ RUN yarn global add eslint-config-standard \
                    eslint-config-standard \
                    eslint-config-standard-jsx \
                    eslint-plugin-import
+RUN yarn global add stylelint stylelint-config-standard
