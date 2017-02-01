@@ -1,4 +1,13 @@
-FROM kkarczmarczyk/node-yarn:6.9
+FROM node:6.9
+
+MAINTAINER Tobias Thüring <docker@fet.li>
+
+# Global install yarn package manager
+RUN npm set progress=false && \
+    npm install -g --progress=false yarn
+
+WORKDIR /workspace
+
 ENV VERSION=3.10.2
 RUN yarn global add eslint@$VERSION
 RUN yarn global add eslint-config-standard \
